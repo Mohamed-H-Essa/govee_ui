@@ -7,15 +7,17 @@ import EditReadingsPage from "./EditingReadingsPage";
 import AdminPage from "./AdminPage";
 import EditingDevicePage from "./EditingDevicePage";
 import EditingUserPage from "./EditingUserPage";
+import MainPage from "./Main";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header></Header>
+        <Header />
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="/manage_users" element={<EditingUserPage />} />
-          {/* <LoginPage /> */}
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </BrowserRouter>
